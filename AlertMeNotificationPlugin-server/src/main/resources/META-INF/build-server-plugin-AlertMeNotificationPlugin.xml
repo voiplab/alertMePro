@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="constructor">
+    <bean id="AlertMeServerSettings" class="pro.alertme.AlertMeServerSettings"/>
+    <bean id="AlertMeNotifier" class="pro.alertme.AlertMeNotifier"/>
+    <bean id="AlertMeServerSettingsPage" class="pro.alertme.AlertMeServerSettingsPage"/>
+    <bean id="AlertMeServerSettingsController" class="pro.alertme.AlertMeServerSettingsController" init-method="initialize"/>
+</beans>
