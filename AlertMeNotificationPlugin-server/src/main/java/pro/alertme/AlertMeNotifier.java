@@ -65,37 +65,37 @@ public class AlertMeNotifier implements Notificator {
 
     @Override
     public void notifyBuildStarted(SRunningBuild sRunningBuild, Set<SUser> sUsers) {
-        String message = String.format("Project '%s' build started. \n %s" , sRunningBuild.getFullName(), this.formatNotificationBuildID(sRunningBuild));
+        String message = String.format("Project '%s' build started. %s" , sRunningBuild.getFullName(), this.formatNotificationBuildID(sRunningBuild));
         this.sendMessageToSkype(sRunningBuild, sUsers, message);
     }
 
     @Override
     public void notifyBuildSuccessful(SRunningBuild sRunningBuild, Set<SUser> sUsers) {
-        String message = String.format("Project '%s' build successfully in %s. \n %s" , sRunningBuild.getFullName(), getDelay(sRunningBuild), this.formatNotificationBuildID(sRunningBuild));
+        String message = String.format("Project '%s' build successfully in %s. %s" , sRunningBuild.getFullName(), getDelay(sRunningBuild), this.formatNotificationBuildID(sRunningBuild));
         this.sendMessageToSkype(sRunningBuild, sUsers, message);
     }
 
     @Override
     public void notifyBuildFailed(SRunningBuild sRunningBuild, Set<SUser> sUsers) {
-        String message = String.format("Project '%s' build failed! ( %s ) \n %s" , sRunningBuild.getFullName(),getDelay(sRunningBuild), this.formatNotificationBuildID(sRunningBuild));
+        String message = String.format("Project '%s' build failed! ( %s ) %s" , sRunningBuild.getFullName(),getDelay(sRunningBuild), this.formatNotificationBuildID(sRunningBuild));
         this.sendMessageToSkype(sRunningBuild, sUsers, message);
     }
 
     @Override
     public void notifyBuildFailedToStart(SRunningBuild sRunningBuild, Set<SUser> sUsers) {
-        String message = String.format("Project '%s' build failed to start. \n %s" , sRunningBuild.getFullName(), this.formatNotificationBuildID(sRunningBuild));
+        String message = String.format("Project '%s' build failed to start. %s" , sRunningBuild.getFullName(), this.formatNotificationBuildID(sRunningBuild));
         this.sendMessageToSkype(sRunningBuild, sUsers, message);
     }
 
     @Override
     public void notifyBuildFailing(SRunningBuild sRunningBuild, Set<SUser> sUsers) {
-        String message = String.format("Project '%s' build failing. \n %s" , sRunningBuild.getFullName(), this.formatNotificationBuildID(sRunningBuild));
+        String message = String.format("Project '%s' build failing. %s" , sRunningBuild.getFullName(), this.formatNotificationBuildID(sRunningBuild));
         this.sendMessageToSkype(sRunningBuild, sUsers, message);
     }
 
     @Override
     public void notifyBuildProbablyHanging(SRunningBuild sRunningBuild, Set<SUser> sUsers) {
-        String message = String.format("Project '%s' probably hanging. \n %s" , sRunningBuild.getFullName(), this.formatNotificationBuildID(sRunningBuild));
+        String message = String.format("Project '%s' probably hanging. %s" , sRunningBuild.getFullName(), this.formatNotificationBuildID(sRunningBuild));
         this.sendMessageToSkype(sRunningBuild, sUsers, message);
     }
 
